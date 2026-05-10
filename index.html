@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable Heroes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="container">
+            <h1>Superheroes Database</h1>
+
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search by hero name..." autocomplete="off" />
+                <select id="pageSize">
+                    <option value="10">10 per page</option>
+                    <option value="20" selected>20 per page</option>
+                    <option value="50">50 per page</option>
+                    <option value="100">100 per page</option>
+                    <option value="all">All results</option>
+                </select>
+            </div>
+
+            <div id="headerPagination" class="pagination"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table id="heroesTable">
+            <thead><tr id="headerRow"></tr></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div id="bottomPagination" class="pagination bottom-pagination"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
